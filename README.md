@@ -4,6 +4,10 @@ A reproducible local video-production capability for Hermes agents: **Qwen-Image
 for stills, the **ArtCraft Rust suite** for compositing and editing, and a validation
 layer that refuses to call anything done that it has not measured.
 
+**Companion article:** [Hermes Local Video Studio: A Reproducible Video Production Capability for Agents](https://www.danielkliewer.com/blog/2026-10-25-hermes-local-video-studio)
+
+**Repository:** <https://github.com/kliewerdaniel/hermes-local-video-studio> · MIT licensed
+
 No cloud. No GUI. No API keys.
 
 ## The rule this repository is built on

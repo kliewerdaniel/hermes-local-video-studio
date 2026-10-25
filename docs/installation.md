@@ -22,7 +22,7 @@ kills when anything else large runs.
 If the ArtCraft suite and the Qwen studio are already installed:
 
 ```bash
-git clone <repo> ~/Projects/hermes-local-video-studio
+git clone https://github.com/kliewerdaniel/hermes-local-video-studio ~/Projects/hermes-local-video-studio
 cd ~/Projects/hermes-local-video-studio
 scripts/setup
 scripts/doctor
@@ -78,7 +78,7 @@ Weights are fetched on demand and are **not** part of this repository.
 **6. This repository**
 
 ```bash
-git clone <repo> ~/Projects/hermes-local-video-studio
+git clone https://github.com/kliewerdaniel/hermes-local-video-studio ~/Projects/hermes-local-video-studio
 cd ~/Projects/hermes-local-video-studio
 python3 -m pip install -e ".[measure]"
 scripts/doctor
