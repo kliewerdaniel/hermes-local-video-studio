@@ -42,7 +42,6 @@ and the `build/` directories. A clone is small; a run produces local artifacts.
 
 ## Licensing
 
-**Unresolved — a decision for the repository owner.** The package declares
-`license: MIT` in the skill frontmatter, matching the author's other skills, but
-the repository itself ships **no LICENSE file** because the choice was not
-confirmed. Do not assume; add `LICENSE` deliberately before publishing.
+MIT. The repository ships a `LICENSE` file and every skill declares
+`license: MIT` in its frontmatter, so the code and the skills carry the same
+terms.

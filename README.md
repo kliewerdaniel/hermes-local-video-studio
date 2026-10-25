@@ -121,7 +121,7 @@ From a real run on an M4 Pro / 51.5 GB (`docs/evidence/`):
   export) are documented in `skills/render-qa` but not implemented here.
 - **EffectCraft is not wired into the runner.** Per-shot compositing is proven in
   the `artcraft-suite-headless` skill, not by this repo's end-to-end test.
-- **License unresolved.** No `LICENSE` file ships until the owner chooses one.
+- **MIT licensed.** See `LICENSE`.
 
 ## Documentation
 
