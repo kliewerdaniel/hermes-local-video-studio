@@ -1,0 +1,60 @@
+{
+  "os": "Darwin 25.6.0",
+  "os_version": "26.6.2",
+  "arch": "arm64",
+  "cpu": "Apple M4 Pro",
+  "cpu_cores": 14,
+  "python": "3.14.7",
+  "python_executable": "~/.hermes/tools/python-3.14.7+20260901-darwin-arm64/bin/python3",
+  "ffmpeg": "ffmpeg version 9.0.1-https://www.martin-riedl.de Copyright (c) 2000-2026 the FFmpeg developers",
+  "ffprobe": "ffprobe version 9.0.2 Copyright (c) 2007-2026 the FFmpeg developers",
+  "text_filters": true,
+  "rust_apps": {
+    "effectcraft": {
+      "path": "~/Projects/effectcraft/target/release/effectcraft-cli",
+      "found": true,
+      "runs": true,
+      "command_catalogue_chars": 106312
+    },
+    "filmcraft": {
+      "path": "~/Projects/filmcraft/target/release/filmcraft-cli",
+      "found": true,
+      "runs": true,
+      "command_catalogue_chars": 88611
+    },
+    "lightcraft": {
+      "path": "~/Projects/lightcraft/target/release/lightcraft-cli",
+      "found": true,
+      "runs": true,
+      "command_catalogue_chars": 70606
+    },
+    "photocraft": {
+      "path": "~/Projects/photocraft/target/debug/photocraft-cli",
+      "found": true,
+      "runs": true,
+      "command_catalogue_chars": 75805
+    },
+    "vectorcraft": {
+      "path": "~/Projects/vectorcraft/target/release/vectorcraft-cli",
+      "found": true,
+      "runs": true,
+      "command_catalogue_chars": 339540
+    },
+    "designcraft": {
+      "path": "~/Projects/designcraft/target/release/designcraft-cli",
+      "found": true,
+      "runs": true,
+      "command_catalogue_chars": 126193
+    },
+    "pdfcraft": {
+      "path": "~/Projects/pdfcraft/target/release/pdfcraft-cli",
+      "found": true,
+      "runs": true,
+      "command_catalogue_chars": 65
+    }
+  },
+  "qwen": {
+    "reachable": false,
+    "error": "<urlopen error [Errno 61] Connection refused>"
+  }
+}

@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Execute a project end to end. --dry-run validates and probes only.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+if [ $# -lt 1 ]; then echo "usage: run-project <project.json> [--dry-run] [--workdir DIR]" >&2; exit 2; fi
+exec python3 -m hlvs.cli run "$@"

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# Non-destructive setup: install the package in editable mode and report what
+# is missing. Never installs system packages, never edits global config.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+echo "== python =="
+python3 --version
+
+echo
+echo "== installing package (editable) =="
+python3 -m pip install -e . --quiet 2>/dev/null || {
+  echo "pip install failed — the CLI still works via 'python3 -m hlvs.cli'"
+}
+
+echo
+echo "== optional measurement dependencies =="
+python3 - <<'PY'
+for mod in ("numpy", "PIL"):
+    try:
+        __import__(mod)
+        print("  %-6s present" % mod)
+    except ImportError:
+        print("  %-6s MISSING — install with: python3 -m pip install numpy pillow" % mod)
+PY
+
+echo
+echo "== capability discovery =="
+python3 -m hlvs.cli doctor || true
+
+echo
+echo "Next: start the image studio, then run examples/minimal-project."

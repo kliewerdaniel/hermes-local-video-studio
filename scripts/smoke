@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Smoke test that needs no model: schema validation + media measurement + tests.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+echo "== unit + integration tests =="
+python3 -m unittest discover -s tests -t . -q
+echo
+echo "== validate the example project =="
+python3 -m hlvs.cli validate examples/minimal-project/project.json
+echo
+echo "== doctor =="
+python3 -m hlvs.cli doctor --no-probe
+echo
+echo "smoke OK"

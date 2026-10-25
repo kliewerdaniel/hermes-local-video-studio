@@ -1,0 +1,50 @@
+{
+  "schema_version": "1.0",
+  "project": {
+    "name": "lighthouse",
+    "canvas": {"width": 1024, "height": 576},
+    "fps": 24
+  },
+  "assets": [
+    {
+      "id": "a_approach",
+      "source": {
+        "kind": "generate",
+        "mode": "t2i",
+        "seed": 4101,
+        "prompt": "A weathered stone lighthouse on a black rock in heavy sea fog, cold blue-grey palette, a single warm amber lamp glowing in the lantern room, wet basalt, long exposure sea, cinematic wide shot, no people, no text"
+      }
+    },
+    {
+      "id": "a_lantern",
+      "source": {
+        "kind": "generate",
+        "mode": "t2i",
+        "seed": 4102,
+        "prompt": "Interior of a lighthouse lantern room, close on the great fresnel lens, brass and glass, warm amber light refracting through prism rings, dust in the beam, cold fog pressing at the window, cinematic, no people, no text"
+      }
+    },
+    {
+      "id": "a_dark",
+      "source": {
+        "kind": "generate",
+        "mode": "t2i",
+        "seed": 4103,
+        "prompt": "The same lighthouse seen from far out at sea at night, only a faint warm point of light in dense fog, almost abstract, vast dark water, minimal composition, cinematic, no people, no text"
+      }
+    }
+  ],
+  "scenes": [
+    {"id": "s1", "asset": "a_approach", "duration": 4.0,
+     "motion": {"type": "push_in", "from": 100, "to": 112}},
+    {"id": "s2", "asset": "a_lantern", "duration": 4.0,
+     "motion": {"type": "push_in", "from": 100, "to": 110}},
+    {"id": "s3", "asset": "a_dark", "duration": 4.0,
+     "motion": {"type": "pull_out", "from": 108, "to": 100}}
+  ],
+  "transitions": [
+    {"between": ["s1", "s2"], "type": "cross_dissolve", "frames": 16},
+    {"between": ["s2", "s3"], "type": "cross_dissolve", "frames": 16}
+  ],
+  "render": {"format": "h264", "bitrateKbps": 6000}
+}

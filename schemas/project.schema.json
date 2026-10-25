@@ -1,0 +1,114 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/kliewerdaniel/hermes-local-video-studio/schemas/project.schema.json",
+  "title": "HLVS production project",
+  "type": "object",
+  "required": ["schema_version", "project", "assets", "scenes"],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "project": {
+      "type": "object",
+      "required": ["name", "canvas", "fps"],
+      "additionalProperties": false,
+      "properties": {
+        "name": {"type": "string", "minLength": 1},
+        "canvas": {
+          "type": "object",
+          "required": ["width", "height"],
+          "additionalProperties": false,
+          "properties": {
+            "width": {"type": "integer", "minimum": 32, "multipleOf": 32},
+            "height": {"type": "integer", "minimum": 32, "multipleOf": 32}
+          }
+        },
+        "fps": {"type": "integer", "minimum": 1, "maximum": 120}
+      }
+    },
+    "assets": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "source"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[A-Za-z0-9_-]+$"},
+          "source": {
+            "oneOf": [
+              {
+                "type": "object",
+                "required": ["kind", "prompt"],
+                "additionalProperties": false,
+                "properties": {
+                  "kind": {"const": "generate"},
+                  "prompt": {"type": "string", "minLength": 1},
+                  "mode": {"enum": ["t2i", "edit", "img2img", "inpaint"]},
+                  "seed": {"type": "integer"},
+                  "width": {"type": "integer", "multipleOf": 32},
+                  "height": {"type": "integer", "multipleOf": 32}
+                }
+              },
+              {
+                "type": "object",
+                "required": ["kind", "path"],
+                "additionalProperties": false,
+                "properties": {
+                  "kind": {"const": "file"},
+                  "path": {"type": "string", "minLength": 1}
+                }
+              }
+            ]
+          }
+        }
+      }
+    },
+    "scenes": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "asset", "duration"],
+        "additionalProperties": false,
+        "properties": {
+          "id": {"type": "string", "pattern": "^[A-Za-z0-9_-]+$"},
+          "asset": {"type": "string"},
+          "duration": {"type": "number", "exclusiveMinimum": 0},
+          "motion": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "type": {"enum": ["none", "push_in", "pull_out", "pan_left", "pan_right"]},
+              "from": {"type": "number"},
+              "to": {"type": "number"}
+            }
+          }
+        }
+      }
+    },
+    "transitions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["between", "type"],
+        "additionalProperties": false,
+        "properties": {
+          "between": {
+            "type": "array", "minItems": 2, "maxItems": 2,
+            "items": {"type": "string"}
+          },
+          "type": {"enum": ["cross_dissolve", "hard_cut"]},
+          "frames": {"type": "integer", "minimum": 0}
+        }
+      }
+    },
+    "render": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "format": {"enum": ["h264"]},
+        "bitrateKbps": {"type": "integer", "minimum": 500}
+      }
+    }
+  }
+}

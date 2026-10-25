@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hermes-local-video-studio"
+version = "0.1.0"
+description = "A reproducible local video-production capability for Hermes agents: Qwen-Image + the ArtCraft Rust suite."
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+# numpy and pillow are only needed by the media *measurement* helpers.
+measure = ["numpy>=1.24", "pillow>=10.0"]
+
+[project.scripts]
+hlvs = "hlvs.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hlvs*"]

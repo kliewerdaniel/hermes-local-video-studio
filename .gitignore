@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.venv/
+
+# generated during a run — never commit media or model outputs
+examples/*/build/
+**/manifest.json
+**/assets.json
+*.fcproj
+*.ecproj
+*.mp4
+*.mov
+*.wav
+*.png
+*.jpg
+
+# keep the evidence frame from a real run — it is proof, not output
+!docs/evidence/*.png
+!examples/**/expected/*.json

@@ -1,0 +1,63 @@
+{
+ "os": "Darwin 25.6.0",
+ "os_version": "26.6.2",
+ "arch": "arm64",
+ "cpu": "Apple M4 Pro",
+ "cpu_cores": "14",
+ "mem_gb": 51.5,
+ "python": "3.9.6",
+ "ffmpeg": "ffmpeg version 9.0.2 Copyright (c) 2000-2026 the FFmpeg developers",
+ "ffprobe": "ffprobe version 9.0.2 Copyright (c) 2007-2026 the FFmpeg developers",
+ "ffmpeg_filters_text": false,
+ "cargo": "cargo 1.87.0 (Homebrew)",
+ "node": "v22.23.1",
+ "git": "git version 2.50.1 (Apple Git-155)",
+ "rust_apps": {
+  "effectcraft": {
+   "path": "/Users/danielkliewer/Projects/effectcraft/target/release/effectcraft-cli",
+   "exists": true,
+   "size_mb": 65.7
+  },
+  "filmcraft": {
+   "path": "/Users/danielkliewer/Projects/filmcraft/target/release/filmcraft-cli",
+   "exists": true,
+   "size_mb": 33.7
+  },
+  "lightcraft": {
+   "path": "/Users/danielkliewer/Projects/lightcraft/target/release/lightcraft-cli",
+   "exists": true,
+   "size_mb": 50.4
+  },
+  "photocraft": {
+   "path": "/Users/danielkliewer/Projects/photocraft/target/debug/photocraft-cli",
+   "exists": true,
+   "size_mb": 57.8
+  },
+  "vectorcraft": {
+   "path": "/Users/danielkliewer/Projects/vectorcraft/target/release/vectorcraft-cli",
+   "exists": true,
+   "size_mb": 44.8
+  },
+  "designcraft": {
+   "path": "/Users/danielkliewer/Projects/designcraft/target/release/designcraft-cli",
+   "exists": true,
+   "size_mb": 36.1
+  },
+  "pdfcraft": {
+   "path": "/Users/danielkliewer/Projects/pdfcraft/target/release/pdfcraft-cli",
+   "exists": true,
+   "size_mb": 30.7
+  }
+ },
+ "qwen_studio": {
+  "path": "/Users/danielkliewer/Projects/qwen-image-studio",
+  "exists": true,
+  "start_sh": true,
+  "port_8787_open": false
+ },
+ "hermes": {
+  "skills_dir": "/Users/danielkliewer/.hermes/skills",
+  "skill_count": 1,
+  "version": "Hermes Agent v0.22.2+1692.g22063fc (2026.9.24) \u00b7 stable \u00b7 local 22063fc099ec\nInstall directory: /Users/danielkliewer/.hermes/hermes-agent\nInstall method: git\nPython: 3.14.7\nOpenAI SDK: 2.24.0\nUpdate available \u2014 run 'hermes update'"
+ }
+}

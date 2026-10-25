@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Inspect a rendered file: streams, duration, clean decode.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+if [ $# -lt 1 ]; then echo "usage: verify-output <file.mp4>" >&2; exit 2; fi
+exec python3 -m hlvs.cli verify "$1"

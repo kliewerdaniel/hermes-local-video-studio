@@ -1,0 +1,373 @@
+{
+  "project": "lighthouse",
+  "generated_at": "2026-10-25T22:56:00Z",
+  "root": "~/Projects/hermes-local-video-studio/examples/minimal-project/build",
+  "steps": [
+    {
+      "step": "validate",
+      "status": "verified",
+      "requested": {},
+      "verified": {
+        "scenes": 3,
+        "assets": 3
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.0
+    },
+    {
+      "step": "capabilities",
+      "status": "verified",
+      "requested": {
+        "probe": true
+      },
+      "verified": {
+        "rust_apps_found": 7,
+        "qwen_reachable": false,
+        "text_filters": false
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.12
+    },
+    {
+      "step": "asset:a_approach",
+      "status": "verified",
+      "requested": {
+        "kind": "generate",
+        "mode": "t2i",
+        "prompt": "A weathered stone lighthouse on a black rock in heavy sea fog, cold blue-grey palette, a single warm amber lamp glowing ",
+        "seed": 4101
+      },
+      "verified": {
+        "path": "~/Projects/qwen-image-studio/outputs/t2i_4101_1792968294_71ca3ed786ba.png",
+        "sha256": "cd0f1d3efdd88a01922afd3be4894fe24e27348f41883b3009b079e192acd88f",
+        "reused": true
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.0
+    },
+    {
+      "step": "asset:a_lantern",
+      "status": "verified",
+      "requested": {
+        "kind": "generate",
+        "mode": "t2i",
+        "prompt": "Interior of a lighthouse lantern room, close on the great fresnel lens, brass and glass, warm amber light refracting thr",
+        "seed": 4102
+      },
+      "verified": {
+        "path": "~/Projects/qwen-image-studio/outputs/t2i_4102_1792968458_ef69867fa34c.png",
+        "sha256": "2a3bcf088c8f6b69eaeebe9be991c95744e0be8e64ab641bc5c235ed1ee1bff9",
+        "reused": true
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.0
+    },
+    {
+      "step": "asset:a_dark",
+      "status": "verified",
+      "requested": {
+        "kind": "generate",
+        "mode": "t2i",
+        "prompt": "The same lighthouse seen from far out at sea at night, only a faint warm point of light in dense fog, almost abstract, v",
+        "seed": 4103
+      },
+      "verified": {
+        "path": "~/Projects/qwen-image-studio/outputs/t2i_4103_1792968587_0a888d9545b6.png",
+        "sha256": "e3597e1116c60f984ad6b5eca20a3a2edac5dc03a0a91ac951e9b3bcb633bc84",
+        "reused": true
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.0
+    },
+    {
+      "step": "nle:create",
+      "status": "verified",
+      "requested": {
+        "path": "~/Projects/hermes-local-video-studio/examples/minimal-project/build/film.fcproj",
+        "canvas": {
+          "width": 1024,
+          "height": 576
+        },
+        "fps": 24
+      },
+      "verified": {
+        "project_exists": true
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.03
+    },
+    {
+      "step": "place:s1",
+      "status": "verified",
+      "requested": {
+        "asset": "a_approach",
+        "start": 0.0,
+        "duration": 4.0
+      },
+      "verified": {
+        "item_id": 8
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.04
+    },
+    {
+      "step": "place:s2",
+      "status": "verified",
+      "requested": {
+        "asset": "a_lantern",
+        "start": 4.0,
+        "duration": 4.0
+      },
+      "verified": {
+        "item_id": 10
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.04
+    },
+    {
+      "step": "place:s3",
+      "status": "verified",
+      "requested": {
+        "asset": "a_dark",
+        "start": 8.0,
+        "duration": 4.0
+      },
+      "verified": {
+        "item_id": 12
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.03
+    },
+    {
+      "step": "nle:map_clips",
+      "status": "verified",
+      "requested": {
+        "expected": 3
+      },
+      "verified": {
+        "clip_ids": [
+          9,
+          11,
+          13
+        ]
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.01
+    },
+    {
+      "step": "motion:s1",
+      "status": "requested_only",
+      "requested": {
+        "type": "push_in",
+        "scale_from": 100.0,
+        "scale_to": 112.0,
+        "start": 0.0,
+        "end": 4.0
+      },
+      "verified": {},
+      "evidence": [],
+      "error": null,
+      "seconds": 0.03
+    },
+    {
+      "step": "motion:s2",
+      "status": "requested_only",
+      "requested": {
+        "type": "push_in",
+        "scale_from": 100.0,
+        "scale_to": 110.0,
+        "start": 4.0,
+        "end": 8.0
+      },
+      "verified": {},
+      "evidence": [],
+      "error": null,
+      "seconds": 0.03
+    },
+    {
+      "step": "motion:s3",
+      "status": "requested_only",
+      "requested": {
+        "type": "pull_out",
+        "scale_from": 100.0,
+        "scale_to": 108.0,
+        "start": 8.0,
+        "end": 12.0
+      },
+      "verified": {},
+      "evidence": [],
+      "error": null,
+      "seconds": 0.04
+    },
+    {
+      "step": "transition:s1->s2",
+      "status": "requested_only",
+      "requested": {
+        "type": "cross_dissolve",
+        "at": 4.0,
+        "frames": 16
+      },
+      "verified": {},
+      "evidence": [],
+      "error": null,
+      "seconds": 0.03
+    },
+    {
+      "step": "transition:s2->s3",
+      "status": "requested_only",
+      "requested": {
+        "type": "cross_dissolve",
+        "at": 8.0,
+        "frames": 16
+      },
+      "verified": {},
+      "evidence": [],
+      "error": null,
+      "seconds": 0.03
+    },
+    {
+      "step": "verify:transitions",
+      "status": "verified",
+      "requested": {
+        "expected": 2
+      },
+      "verified": {
+        "count": 2
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.01
+    },
+    {
+      "step": "render",
+      "status": "verified",
+      "requested": {
+        "path": "~/Projects/hermes-local-video-studio/examples/minimal-project/build/output.mp4",
+        "bitrateKbps": 6000
+      },
+      "verified": {
+        "bytes": 9264092,
+        "duration": 12.01,
+        "sha256": "9ae966c869ef1bc99d84c976016b192dbba9a6d54645a3ee740728df242ddd09"
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 2.53
+    },
+    {
+      "step": "verify:container",
+      "status": "verified",
+      "requested": {
+        "path": "~/Projects/hermes-local-video-studio/examples/minimal-project/build/output.mp4"
+      },
+      "verified": {
+        "codec": "h264",
+        "width": 1024,
+        "height": 576,
+        "duration": 12.01
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.04
+    },
+    {
+      "step": "verify:decode",
+      "status": "verified",
+      "requested": {
+        "path": "~/Projects/hermes-local-video-studio/examples/minimal-project/build/output.mp4"
+      },
+      "verified": {
+        "clean": true
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.23
+    },
+    {
+      "step": "verify:duration",
+      "status": "verified",
+      "requested": {
+        "rule": "sum(durations) - dissolve overlaps"
+      },
+      "verified": {
+        "actual": 12.01,
+        "model": "sum",
+        "expected": 12.0,
+        "tolerance": 0.5
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 0.0
+    },
+    {
+      "step": "verify:motion",
+      "status": "verified",
+      "requested": {
+        "rule": "frame diff inside each moving clip"
+      },
+      "verified": {
+        "frame_diff": {
+          "s1": 6.707,
+          "s2": 28.343,
+          "s3": 0.935
+        }
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 1.26
+    },
+    {
+      "step": "verify:content",
+      "status": "verified",
+      "requested": {
+        "rule": ">=1 of 3 samples has luma std > 3"
+      },
+      "verified": {
+        "luma_std": {
+          "s1": [
+            74.8,
+            74.5,
+            74.3
+          ],
+          "s2": [
+            60.7,
+            60.3,
+            60.0
+          ],
+          "s3": [
+            13.4,
+            13.4,
+            13.3
+          ]
+        }
+      },
+      "evidence": [],
+      "error": null,
+      "seconds": 1.43
+    }
+  ],
+  "artifacts": [
+    {
+      "name": "render",
+      "path": "~/Projects/hermes-local-video-studio/examples/minimal-project/build/output.mp4",
+      "bytes": 9264092,
+      "sha256": "9ae966c869ef1bc99d84c976016b192dbba9a6d54645a3ee740728df242ddd09"
+    }
+  ],
+  "summary": {
+    "verified": 17,
+    "requested_only": 5,
+    "failed": 0,
+    "skipped": 0
+  }
+}
